@@ -1,0 +1,30 @@
+l1 = list(map(int, input().split(',')))
+num1 = sum(l1[:l1.index(4)])+sum(l1[l1.index(7)+1:])
+lst = l1[l1.index(4):l1.index(7)+1]
+length = len(lst)
+num2 = ''
+for i in lst:
+    num2+=str(i)
+print(num1+int(num2))
+
+#output
+#3,1,6,4,2,3,7,2
+#3+1+6+2 + 4237
+#4249
+
+---------------------------------------------
+NAIVE APPROACH
+input_string = input().split(',')
+index_4 = input_string.index('4')
+index_7 = input_string.index('7')
+length = len(input_string)
+num1 = 0
+num2 = ''
+for i in range(0,length):
+    if(i < index_4 or i > index_7):
+       num1+=int(input_string[i])
+for j in range(index_4,index_7+1):
+    num2+=input_string[j]
+    
+sum = num1 + int(num2)
+print(sum)
