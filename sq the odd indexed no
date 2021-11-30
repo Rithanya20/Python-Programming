@@ -1,0 +1,9 @@
+ip = input()
+out = ""
+length = len(ip)
+for i in range(1,length,2):
+    out+= str(int(ip[i])**2)
+print(out[0:4])
+
+#5624381275
+#3616
