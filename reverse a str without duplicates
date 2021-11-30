@@ -1,0 +1,17 @@
+string = input()
+--------------------------
+#d = list(dict.fromkeys(string))
+#d.reverse()
+#print("".join(d))
+#print(d)
+-------------------------------
+output = ""
+for i in string:
+    if i not in output:
+        output+=i
+print(output[::-1])
+#print(output)
+
+#OUTPUT
+#GOOGLE
+#>>ELOG
