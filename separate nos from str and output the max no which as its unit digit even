@@ -1,0 +1,26 @@
+import re
+input_str = input()
+digit = [i for i in set(input_str) if i.isdigit()]
+digit.sort()
+digit.reverse()
+num = int(''.join(digit))
+if num%2==0:
+    print(num)
+else:
+    length = len(digit)
+    for j in range(length-1, 0, -1):
+        if(int(digit[j])%2==0):
+            a = digit[j]
+            digit.remove(a)
+            digit.insert(length-1,a)
+            even = int(''.join(digit))
+            print(even)
+            break
+    else:
+        print(-1)
+            
+  #infytq3571
+  #-1
+  #TCS@75483
+  #87534
+  
