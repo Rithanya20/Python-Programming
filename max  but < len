@@ -1,0 +1,20 @@
+input_str = input().split(',')
+final = ""
+
+for a in input_str:
+    x,y = a.split(':')
+    length = len(x);
+    max = 0;
+
+    for i in y:
+        if int(i)>=int(max) and int(i)<=length:
+           max = i
+    if max == 0:
+        final += 'X'
+    else:
+        final += x[int(max)-1]
+    
+print(final)
+
+Anchal:23581,Aman:57568
+aX
