@@ -1,0 +1,10 @@
+t = int(input())
+while(t!=0):
+    str = input()
+    lt = str.split('.')
+    lt.reverse()
+    print(".".join(lt))
+    t-=1
+1
+i.like.apple
+apple.like.i
